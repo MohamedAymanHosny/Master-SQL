@@ -52,6 +52,35 @@ The goal of this project is to demonstrate a well-structured relational database
  └── README.md        # Project documentation
 ```
 
+## 📌 Features
+
+* ✅ Fully normalized relational schema
+* ✅ Real-world store & sales workflow
+* ✅ Uses proper foreign key constraints
+* ✅ Supports multiple stores and inventory tracking
+* ✅ Ensures referential integrity across modules
+* ✅ Easy to extend (can add payments, suppliers, etc.)
+
+## 🛠️ Example SQL Queries
+
+```sql
+-- View all products with category and brand
+SELECT p.product_name, c.category_name, b.brand_name
+FROM products p
+JOIN categories c ON p.category_id = c.category_id
+JOIN brands b ON p.brand_id = b.brand_id;
+
+-- Customer recent orders
+SELECT o.order_id, o.order_date, c.first_name, c.last_name
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id;
+```
+
+## 📥 Download ERD
+
+You can view or download the ERD from this link:
+[Download Diagram](https://edrawcloudpublicus.s3.amazonaws.com/viewer/self/9057521/share/2025-10-21/1761075269/main.svg)
+
 ## 👤 Author
 
 **Mohamed Ayman**
@@ -70,6 +99,3 @@ If you want, I can also:
 * Add ERD downloadable version
 
 Just tell me **"add more"** if you want improvements.
-
-
-![Database Diagram](https://edrawcloudpublicus.s3.amazonaws.com/viewer/self/9057521/share/2025-10-21/1761075269/main.svg)
