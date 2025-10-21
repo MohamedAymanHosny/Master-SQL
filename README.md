@@ -1,25 +1,75 @@
-| Module         | Description                                               |
-| -------------- | --------------------------------------------------------- |
-| **Sales**      | Handles customers, staff, stores, orders, and order items |
-| **Production** | Handles products, brands, categories, and stock           |
+# 🏪 Store Management & Sales Database
 
-| Table           | Role                        | Key Relationships                                  |
-| --------------- | --------------------------- | -------------------------------------------------- |
-| **Customers**   | Contains customer info      | Linked to `Orders` (1 customer → many orders)      |
-| **Staffs**      | Employees working in stores | Linked to `Stores` (each staff works at one store) |
-| **Stores**      | Physical shop locations     | Linked to `Orders`, `Staffs`, `Stocks`             |
-| **Orders**      | Customer orders             | References `Customers`, `Stores`, and `Staffs`     |
-| **Order_Items** | Items inside each order     | Links each order to its products                   |
+![Database Diagram](https://edrawcloudpublicus.s3.amazonaws.com/viewer/self/9057521/share/2025-10-21/1761075269/main.svg)
 
-| Relationship         | Description                             |
-| -------------------- | --------------------------------------- |
-| Store ↔ Staff        | One store → many staff                  |
-| Store ↔ Orders       | One store → many orders                 |
-| Staff ↔ Orders       | One staff → many orders                 |
-| Customer ↔ Orders    | One customer → many orders              |
-| Order ↔ OrderItems   | One order → many items                  |
-| Product ↔ OrderItems | One product → many order items          |
-| Product ↔ Stocks     | A product exists in many stores (stock) |
-| Store ↔ Stocks       | A store has many products in stock      |
+## 📌 Overview
+
+This project is a complete **Store Management and Sales System** designed using **SQL Server**. It simulates a real retail environment including products, categories, brands, stores, staff, customers, and order management.
+
+The goal of this project is to demonstrate a well-structured relational database using proper normalization, foreign keys, and entity relationships.
+
+## 🧱 Database Modules
+
+| Module                | Description                                               |
+| --------------------- | --------------------------------------------------------- |
+| **Sales Module**      | Handles orders, customers, staff, stores, and order items |
+| **Production Module** | Handles products, brands, categories, and stock levels    |
+
+## 🔗 Main Relationships
+
+| Relationship                                           | Explanation |
+| ------------------------------------------------------ | ----------- |
+| One **Customer** → Many **Orders**                     |             |
+| One **Order** → Many **Order Items**                   |             |
+| One **Store** → Many **Staff**                         |             |
+| One **Store** → Many **Orders**                        |             |
+| One **Product** → Many **Order Items**                 |             |
+| One **Category** → Many **Products**                   |             |
+| One **Brand** → Many **Products**                      |             |
+| One **Store** + One **Product** → One **Stock Record** |             |
+
+## ⚙️ Technologies Used
+
+* Microsoft SQL Server
+* T-SQL
+* SSMS (SQL Server Management Studio)
+
+## 🚀 How to Run the Project
+
+1. Clone or download this repository
+2. Open SQL Server Management Studio
+3. Create a new database
+4. Copy & paste the `.sql` script into a new query window
+5. Execute the script
+6. Open **Database Diagrams** to view table relationships
+
+## 📂 Folder Structure
+
+```
+📁 SQL-Store-Database
+ ├── schema.sql       # Database creation script
+ ├── inserts.sql      # Sample data (if available)
+ └── README.md        # Project documentation
+```
+
+## 👤 Author
+
+**Mohamed Ayman**
+📌 SQL & Software Engineering Student
+🌍 Egypt
+
+GitHub Profile: [https://github.com/MohamedAymanHosny](https://github.com/MohamedAymanHosny)
+
+---
+
+✅ This README is ready to be published on GitHub.
+If you want, I can also:
+
+* Add step-by-step setup screenshots
+* Add sample SQL queries (SELECT, JOIN, INSERT)
+* Add ERD downloadable version
+
+Just tell me **"add more"** if you want improvements.
+
 
 ![Database Diagram](https://edrawcloudpublicus.s3.amazonaws.com/viewer/self/9057521/share/2025-10-21/1761075269/main.svg)
